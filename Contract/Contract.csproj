@@ -39,7 +39,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="contract\AdminstrationContract.cs" />
+    <Compile Include="contract\CustomerContract.cs" />
+    <Compile Include="dto\Customer.cs" />
+    <Compile Include="dto\Dock.cs" />
+    <Compile Include="dto\Ferry.cs" />
+    <Compile Include="dto\Reservation.cs" />
+    <Compile Include="dto\Route.cs" />
+    <Compile Include="dto\Trip.cs" />
+    <Compile Include="dto\Vehicle.cs" />
+    <Compile Include="eto\CustomerLoginException.cs" />
+    <Compile Include="eto\CustomerNotFoundException.cs" />
+    <Compile Include="eto\FerryNotFoundException.cs" />
+    <Compile Include="eto\ReservationNotFoundException.cs" />
+    <Compile Include="eto\RouteNotFoundException.cs" />
+    <Compile Include="eto\SessionExpiredException.cs" />
+    <Compile Include="eto\TripNotAvailableException.cs" />
+    <Compile Include="eto\TripNotFoundException.cs" />
+    <Compile Include="eto\VehicleNotFoundException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
