@@ -53,6 +53,8 @@
     <Compile Include="eto\CustomerLoginException.cs" />
     <Compile Include="eto\CustomerNotFoundException.cs" />
     <Compile Include="eto\FerryNotFoundException.cs" />
+    <Compile Include="eto\IllegalParameterException.cs" />
+    <Compile Include="eto\MissingParameterException.cs" />
     <Compile Include="eto\ReservationNotFoundException.cs" />
     <Compile Include="eto\RouteNotFoundException.cs" />
     <Compile Include="eto\SessionExpiredException.cs" />
