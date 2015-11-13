@@ -7,8 +7,15 @@ using System.Threading.Tasks;
 
 namespace Contract.contract
 {
+    /// <summary>
+    /// Interface for Customer Contract
+    /// </summary>
     public interface CustomerContract
     {
+         /// <summary>
+         /// Get a list of all trips
+         /// </summary>
+         /// <returns>List of all trips</returns>
          List<Trip> GetAllTrips();
          List<Reservation> GetAllCustomerReservations(Customer customer);
          bool CreateCustomer(Customer customer);
