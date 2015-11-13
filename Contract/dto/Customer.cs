@@ -9,7 +9,8 @@ namespace Contract.dto
     public class Customer
     {
         public int CustomerId { get; set; }
-        public string FirstName { get; set; }
+        public string Firstname { get; set; }
+        public string Lastname { get; set; }
         public string Phone { get; set; }
         public string Mail { get; set; }
         public string Street { get; set; }
