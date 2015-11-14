@@ -8,8 +8,9 @@ namespace Contract.dto
 {
     public class Route
     {
-        public DateTime Depature { get; set; }
-        public int Duration { get; set; }
+        public int RouteId { get; set; }
+        public string Depature { get; set; }
         public string Destination { get; set; }
+        public int Duration { get; set; }
     }
 }
