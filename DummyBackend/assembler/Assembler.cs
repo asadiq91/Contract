@@ -42,22 +42,22 @@ namespace DummyBackend.assembler
         private List<Ferry> AssembleFerries()
         {
             var ferries = new List<Ferry>();
-            ferries.Add(new Ferry { FerryId = 1, DockId = null, Municipality = "Ishøj Kommune", Name = "Isabella", PassengerCapacity = 200,VehicleCapacity = 250, Size = "Large"});
-            ferries.Add(new Ferry { FerryId = 2, DockId = null, Municipality = "Ishøj Kommune", Name = "Monica", PassengerCapacity = 200, VehicleCapacity = 25, Size = "Large" });
-            ferries.Add(new Ferry { FerryId = 3, DockId = null, Municipality = "Ishøj Kommune", Name = "America", PassengerCapacity = 200, VehicleCapacity = 19, Size = "Large"});
-            ferries.Add(new Ferry { FerryId = 4, DockId = null, Municipality = "Ishøj Kommune", Name = "Mærsk VI", PassengerCapacity = 200, VehicleCapacity = 0, Size = "Large"});
-            ferries.Add(new Ferry { FerryId = 5, DockId = null, Municipality = "Ishøj Kommune", Name = "Turan", PassengerCapacity = 200, VehicleCapacity = 5000, Size = "Large"});
+            ferries.Add(new Ferry { FerryId = 1, DockId = null, Municipality = "Ishøj Kommune", FerryName = "Isabella", PassengerCapacity = 200,VehicleCapacity = 250, FerrySize = "Large"});
+            ferries.Add(new Ferry { FerryId = 2, DockId = null, Municipality = "Ishøj Kommune", FerryName = "Monica", PassengerCapacity = 200, VehicleCapacity = 25, FerrySize = "Large" });
+            ferries.Add(new Ferry { FerryId = 3, DockId = null, Municipality = "Ishøj Kommune", FerryName = "America", PassengerCapacity = 200, VehicleCapacity = 19, FerrySize = "Large"});
+            ferries.Add(new Ferry { FerryId = 4, DockId = null, Municipality = "Ishøj Kommune", FerryName = "Mærsk VI", PassengerCapacity = 200, VehicleCapacity = 0, FerrySize = "Large"});
+            ferries.Add(new Ferry { FerryId = 5, DockId = null, Municipality = "Ishøj Kommune", FerryName = "Turan", PassengerCapacity = 200, VehicleCapacity = 5000, FerrySize = "Large"});
             return ferries;
         }
 
         private List<Dock> AssembleDocks()
         {
             var docks = new List<Dock>();
-            docks.Add(new Dock { DockId = 1, FerryCapacity = 20, Name = "Ishøj Havn" });
-            docks.Add(new Dock { DockId = 2, FerryCapacity = 20, Name = "Vallensbæk Havn" });
-            docks.Add(new Dock { DockId = 3, FerryCapacity = 20, Name = "LængereUdePåLandet Havn" });
-            docks.Add(new Dock { DockId = 4, FerryCapacity = 20, Name = "Langbortistan Havn" });
-            docks.Add(new Dock { DockId = 5, FerryCapacity = 20, Name = "Kharaci Havn" });
+            docks.Add(new Dock { DockId = 1, FerryCapacity = 20, DockName = "Ishøj Havn" });
+            docks.Add(new Dock { DockId = 2, FerryCapacity = 20, DockName = "Vallensbæk Havn" });
+            docks.Add(new Dock { DockId = 3, FerryCapacity = 20, DockName = "LængereUdePåLandet Havn" });
+            docks.Add(new Dock { DockId = 4, FerryCapacity = 20, DockName = "Langbortistan Havn" });
+            docks.Add(new Dock { DockId = 5, FerryCapacity = 20, DockName = "Kharaci Havn" });
             return docks;
         }
 
@@ -97,11 +97,11 @@ namespace DummyBackend.assembler
         private List<Trip> AssembleTrips()
         {
             var trips = new List<Trip>();
-            trips.Add(new Trip { TripId = 1, DepatureTime = new DateTime(2015, 04, 12, 21, 45, 00), RouteId = 1, FerryId = 1, Price = 100 });
-            trips.Add(new Trip { TripId = 2, DepatureTime = new DateTime(2015, 11, 12, 12, 55, 00), RouteId = 2, FerryId = 2, Price = 120 });
-            trips.Add(new Trip { TripId = 3, DepatureTime = new DateTime(2015, 07, 12, 14, 30, 00), RouteId = 3, FerryId = 3, Price = 100 });
-            trips.Add(new Trip { TripId = 4, DepatureTime = new DateTime(2015, 12, 12, 02, 10, 00), RouteId = 4, FerryId = 4, Price = 150 });
-            trips.Add(new Trip { TripId = 5, DepatureTime = new DateTime(2015, 01, 12, 10, 18, 00), RouteId = 5, FerryId = 5, Price = 119 });
+            trips.Add(new Trip { TripId = 1, DepatureTime = new DateTime(2015, 04, 12, 21, 45, 00), RouteId = 1, FerryId = 1, TripPrice = 100 });
+            trips.Add(new Trip { TripId = 2, DepatureTime = new DateTime(2015, 11, 12, 12, 55, 00), RouteId = 2, FerryId = 2, TripPrice = 120 });
+            trips.Add(new Trip { TripId = 3, DepatureTime = new DateTime(2015, 07, 12, 14, 30, 00), RouteId = 3, FerryId = 3, TripPrice = 100 });
+            trips.Add(new Trip { TripId = 4, DepatureTime = new DateTime(2015, 12, 12, 02, 10, 00), RouteId = 4, FerryId = 4, TripPrice = 150 });
+            trips.Add(new Trip { TripId = 5, DepatureTime = new DateTime(2015, 01, 12, 10, 18, 00), RouteId = 5, FerryId = 5, TripPrice = 119 });
             return trips;
         }
 

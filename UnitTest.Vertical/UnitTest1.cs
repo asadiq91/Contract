@@ -266,9 +266,9 @@ namespace UnitTest.Vertical
                 DockId = 1, //Question:  What is this? A secret class?
                 FerryId = 1,
                 Municipality = "Andeby",
-                Name = "Hugo",
+                FerryName = "Hugo",
                 PassengerCapacity = 7,
-                Size = "VERY BIG"
+                FerrySize = "VERY BIG"
             };
             //Question:  Backend: Since we have no exceptions in eto to throw, we just return null if something went wrong?
             Ferry returnValue = ais.CreateFerry(newFerry);
@@ -459,7 +459,7 @@ namespace UnitTest.Vertical
             Trip trip = new Trip()
             {
                 FerryId = 1,
-                Price = 2.25,
+                TripPrice = 2.25,
                 RouteId = 1,
                 TripId = 1
             };
@@ -511,7 +511,7 @@ namespace UnitTest.Vertical
                 Assert.Fail("TripNotFoundException");
             }
 
-            trip.Price++;
+            trip.TripPrice++;
             Trip returnTrip = null;
             try
             {
@@ -646,7 +646,7 @@ namespace UnitTest.Vertical
             //Question:  So where do we Depart FROM?
             Route item = new Route()
             {
-                Depature = DateTime.Now,
+                Depature = "Here",
                 Destination = "Somewhere else than here",
                 Duration = 900
             };
