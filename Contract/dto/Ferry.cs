@@ -12,6 +12,7 @@ namespace Contract.dto
         public string Name { get; set; }
         public string Size { get; set; }
         public int PassengerCapacity { get; set; }
+        public int VehicleCapacity { get; set; }
         public string Municipality { get; set; }
         public int? DockId { get; set; }
     }

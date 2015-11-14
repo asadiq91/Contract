@@ -11,5 +11,6 @@ namespace Contract.dto
         public int VehicleId { get; set; }
         public int VehicleSize { get; set; }
         public string VehicleType { get; set; }
+        public double VehiclePrice { get; set; }
     }
 }
