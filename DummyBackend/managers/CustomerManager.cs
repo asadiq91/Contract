@@ -9,7 +9,6 @@ using DummyBackend.assembler;
 
 namespace DummyBackend.managers
 {
-    //NIX PILLE!!!!!!!!!!!!!!!!!!!!!!!!!!!
     public class CustomerManager : CustomerContract
     {
         Assembler db;
