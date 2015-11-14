@@ -84,37 +84,72 @@ namespace UnitTest.Vertical
             throw new NotImplementedException();
         }
 
+        public List<Customer> GetAllCustomer()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Dock> GetAllDocks()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Ferry> GetAllFerries()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Reservation> GetAllReservations()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Route> GetAllRoutes()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Trip> GetAllTrips()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Vehicle> GetAllVehicles()
+        {
+            throw new NotImplementedException();
+        }
+
         public Customer GetCustomer(string mail)
         {
             throw new NotImplementedException();
         }
 
-        public Dock GetDock(string mail)
+        public Dock GetDock(int dockId)
         {
             throw new NotImplementedException();
         }
 
-        public Ferry GetFerry(string mail)
+        public Ferry GetFerry(int ferryId)
         {
             throw new NotImplementedException();
         }
 
-        public Reservation GetReservation(string mail)
+        public Reservation GetReservation(int reservationId)
         {
             throw new NotImplementedException();
         }
 
-        public Route GetRoute(string mail)
+        public Route GetRoute(int routeId)
         {
             throw new NotImplementedException();
         }
 
-        public Trip GetTrip(string mail)
+        public Trip GetTrip(int tripId)
         {
             throw new NotImplementedException();
         }
 
-        public Vehicle GetVehicle(string mail)
+        public Vehicle GetVehicle(int vehicleId)
         {
             throw new NotImplementedException();
         }

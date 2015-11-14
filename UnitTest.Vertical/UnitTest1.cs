@@ -15,7 +15,6 @@ namespace UnitTest.Vertical
     public class UnitTest1
     {
 
-
         private CustomerContract getCustomerContract()
         {
             return new CustomerInterfaceStub();
@@ -97,8 +96,7 @@ namespace UnitTest.Vertical
             double totalPrice = 500.00;
             int numberOfPeople = 2000;
 
-            //Question:  And now we use the adminInterface, where Vehicle can be found throught its email?
-            Vehicle vehicle = ais.GetVehicle("anders@and.com");
+            Vehicle vehicle = ais.GetVehicle(1);
 
 
             Reservation reservation = null;
@@ -291,7 +289,7 @@ namespace UnitTest.Vertical
                 //Its missing in the DTO... 
                 //so we cant save it. 
                 //you can create millions of ferrys, but GetFerry will always fail...
-                newFerry = ais.GetFerry("anders@and.com");
+                newFerry = ais.GetFerry(1);
             }
             catch (FerryNotFoundException ex)
             {
@@ -313,7 +311,7 @@ namespace UnitTest.Vertical
                 //Its missing in the DTO... 
                 //so we cant save it. 
                 //you can create millions of ferrys, but GetFerry will always fail...
-                newFerry = ais.GetFerry("anders@and.com");
+                newFerry = ais.GetFerry(1);
             }
             catch (FerryNotFoundException ex)
             {
@@ -330,7 +328,7 @@ namespace UnitTest.Vertical
         public void AdminstrationContractDeleteFerry()
         {
             AdminstrationContract ais = getAdministrationContract();
-            Ferry newFerry = ais.GetFerry("anders@and.com");
+            Ferry newFerry = ais.GetFerry(1);
             bool result = false;
             try
             {
@@ -388,7 +386,7 @@ namespace UnitTest.Vertical
             Reservation reservation = null;
             try
             {
-                reservation = ais.GetReservation("anders@and.com");
+                reservation = ais.GetReservation(1);
             }
             catch (ReservationNotFoundException)
             {
@@ -407,7 +405,7 @@ namespace UnitTest.Vertical
             Reservation reservation = null;
             try
             {
-                reservation = ais.GetReservation("anders@and.com");
+                reservation = ais.GetReservation(1);
             }
             catch (ReservationNotFoundException)
             {
@@ -434,7 +432,7 @@ namespace UnitTest.Vertical
             Reservation reservation = null;
             try
             {
-                reservation = ais.GetReservation("anders@and.com");
+                reservation = ais.GetReservation(1);
             }
             catch (ReservationNotFoundException)
             {
@@ -490,7 +488,7 @@ namespace UnitTest.Vertical
             Trip trip = null;
             try
             {
-                trip = ais.GetTrip("anders@and.com");
+                trip = ais.GetTrip(1);
             }
             catch (TripNotFoundException)
             {
@@ -506,7 +504,7 @@ namespace UnitTest.Vertical
             Trip trip = null;
             try
             {
-                trip = ais.GetTrip("anders@and.com");
+                trip = ais.GetTrip(1);
             }
             catch (TripNotFoundException)
             {
@@ -534,7 +532,7 @@ namespace UnitTest.Vertical
             Trip trip = null;
             try
             {
-                trip = ais.GetTrip("anders@and.com");
+                trip = ais.GetTrip(1);
             }
             catch (TripNotFoundException)
             {
@@ -579,7 +577,7 @@ namespace UnitTest.Vertical
             Vehicle item = null;
             try
             {
-                item = ais.GetVehicle("anders@and.com");
+                item = ais.GetVehicle(1);
             }
             catch (VehicleNotFoundException)
             {
@@ -595,7 +593,7 @@ namespace UnitTest.Vertical
             Vehicle item = null;
             try
             {
-                item = ais.GetVehicle("anders@and.com");
+                item = ais.GetVehicle(1);
             }
             catch (VehicleNotFoundException)
             {
@@ -623,7 +621,7 @@ namespace UnitTest.Vertical
             Vehicle item = null;
             try
             {
-                item = ais.GetVehicle("anders@and.com");
+                item = ais.GetVehicle(1);
             }
             catch (VehicleNotFoundException)
             {
@@ -666,7 +664,7 @@ namespace UnitTest.Vertical
             Route item = null;
             try
             {
-                item = ais.GetRoute("anders@and.com");
+                item = ais.GetRoute(1);
             }
             catch (RouteNotFoundException)
             {
@@ -682,7 +680,7 @@ namespace UnitTest.Vertical
             Route item = null;
             try
             {
-                item = ais.GetRoute("anders@and.com");
+                item = ais.GetRoute(1);
             }
             catch (RouteNotFoundException)
             {
@@ -710,7 +708,7 @@ namespace UnitTest.Vertical
             Route item = null;
             try
             {
-                item = ais.GetRoute("anders@and.com");
+                item = ais.GetRoute(1);
             }
             catch (RouteNotFoundException)
             {
@@ -722,51 +720,57 @@ namespace UnitTest.Vertical
             {
                 result = ais.DeleteRoute(item);
             }
-            catch(RouteNotFoundException)
+            catch (RouteNotFoundException)
             {
                 Assert.Fail("RouteNotFoundException");
             }
-            Assert.IsTrue(result); 
+            Assert.IsTrue(result);
         }
 
         [TestMethod]
         public void AdminstrationContractGetCustomers()
         {
-            //Question: Not in interface, but described in documentation
-            Assert.Fail("Not in interface, but described in documentation");
+            AdminstrationContract ais = getAdministrationContract();
+            List<Customer> itemList = ais.GetAllCustomer();
+            Assert.AreNotEqual(0, itemList.Count);
         }
 
         [TestMethod]
         public void AdminstrationContractGetFerries()
         {
-            //Question: Not in interface, but described in documentation
-            Assert.Fail("Not in interface, but described in documentation");
+            AdminstrationContract ais = getAdministrationContract();
+            List<Ferry> itemList = ais.GetAllFerries();
+            Assert.AreNotEqual(0, itemList.Count);
         }
 
         public void AdminstrationContractGetTrips()
         {
-            //Question: Not in interface, but described in documentation
-            Assert.Fail("Not in interface, but described in documentation");
+            AdminstrationContract ais = getAdministrationContract();
+            List<Trip> itemList = ais.GetAllTrips();
+            Assert.AreNotEqual(0, itemList.Count);
         }
 
         [TestMethod]
         public void AdminstrationContractGetReservations()
         {
-            //Question: Not in interface, but described in documentation
-            Assert.Fail("Not in interface, but described in documentation");
+            AdminstrationContract ais = getAdministrationContract();
+            List<Reservation> itemList = ais.GetAllReservations();
+            Assert.AreNotEqual(0, itemList.Count);
         }
 
         public void AdminstrationContractGetVehicles()
         {
-            //Question: Not in interface, but described in documentation
-            Assert.Fail("Not in interface, but described in documentation");
+            AdminstrationContract ais = getAdministrationContract();
+            List<Vehicle> itemList = ais.GetAllVehicles();
+            Assert.AreNotEqual(0, itemList.Count);
         }
 
         [TestMethod]
         public void AdminstrationContractGetRoutes()
         {
-            //Question: Not in interface, but described in documentation
-            Assert.Fail("Not in interface, but described in documentation");
+            AdminstrationContract ais = getAdministrationContract();
+            List<Route> itemList = ais.GetAllRoutes();
+            Assert.AreNotEqual(0, itemList.Count);
         }
         #endregion
     }
