@@ -28,7 +28,7 @@ namespace DummyBackend.assembler
             TripList = AssembleTrips();
         }
 
-        public List<Customer> AssembleCustomers()
+        private List<Customer> AssembleCustomers()
         {
             var customers = new List<Customer>();
             customers.Add(new Customer { CustomerId = 1, Firstname = "Ahmed", Lastname = "Sadiq", Mail = "mail@mail.dk", Phone = "12345678", Street = "Boulevardgaden" , HouseNumber = "48A", PostalCode = 2635, City = "Ishøj" });
@@ -39,7 +39,7 @@ namespace DummyBackend.assembler
             return customers;
         }
 
-        public List<Ferry> AssembleFerries()
+        private List<Ferry> AssembleFerries()
         {
             var ferries = new List<Ferry>();
             ferries.Add(new Ferry { FerryId = 1, DockId = null, Municipality = "Ishøj Kommune", Name = "Isabella", PassengerCapacity = 200,VehicleCapacity = 250, Size = "Large"});
@@ -50,7 +50,7 @@ namespace DummyBackend.assembler
             return ferries;
         }
 
-        public List<Dock> AssembleDocks()
+        private List<Dock> AssembleDocks()
         {
             var docks = new List<Dock>();
             docks.Add(new Dock { DockId = 1, FerryCapacity = 20, Name = "Ishøj Havn" });
@@ -61,7 +61,7 @@ namespace DummyBackend.assembler
             return docks;
         }
 
-        public List<Vehicle> AssembleVehicles()
+        private List<Vehicle> AssembleVehicles()
         {
             var vehicles = new List<Vehicle>();
             vehicles.Add(new Vehicle { VehicleId = 1, VehicleSize = 1, VehicleType = "Personbil", VehiclePrice = 200.85 });
@@ -72,7 +72,7 @@ namespace DummyBackend.assembler
             return vehicles;
         }
 
-        public List<Reservation> AssembleReservations()
+        private List<Reservation> AssembleReservations()
         {
             var reservations = new List<Reservation>();
             reservations.Add(new Reservation { ReservationId = 1, CustomerId = 1, NumberOfPeople = 1, TotalPrice = 500, TripId = 1, VehicleId = 1 });
@@ -83,7 +83,7 @@ namespace DummyBackend.assembler
             return reservations;
         }
 
-        public List<Route> AssembleRoutes()
+        private List<Route> AssembleRoutes()
         {
             var routes = new List<Route>();
             routes.Add(new Route { RouteId = 1, Depature = "Lyngby", Duration = 90, Destination = "Ishøj" });
@@ -94,7 +94,7 @@ namespace DummyBackend.assembler
             return routes;
         }
 
-        public List<Trip> AssembleTrips()
+        private List<Trip> AssembleTrips()
         {
             var trips = new List<Trip>();
             trips.Add(new Trip { TripId = 1, DepatureTime = new DateTime(2015, 04, 12, 21, 45, 00), RouteId = 1, FerryId = 1, Price = 100 });

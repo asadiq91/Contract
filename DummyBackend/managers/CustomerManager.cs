@@ -20,17 +20,18 @@ namespace DummyBackend.managers
 
         public List<Trip> GetAllTrips()
         {
-            throw new NotImplementedException();
+            return db.TripList;
         }
 
         public List<Reservation> GetAllCustomerReservations(Customer customer)
         {
-            throw new NotImplementedException();
+            return db.ReservationList.Where(x => x.CustomerId == customer.CustomerId).ToList();
         }
 
         public bool CreateCustomer(Customer customer)
         {
-            throw new NotImplementedException();
+            db.CustomerList.Add(customer);
+            return true;
         }
 
         public Customer GetCustomerByLogin(string username, string password)
@@ -40,12 +41,14 @@ namespace DummyBackend.managers
 
         public Reservation CreateCustomerReservation(Trip trip, Customer customer, double totalPrice, int numberOfPeople, Vehicle vehicle)
         {
-            throw new NotImplementedException();
+            var reservation = new Reservation {ReservationId = (db.ReservationList.Count+1), CustomerId = customer.CustomerId, TripId = trip.TripId, VehicleId = vehicle.VehicleId, TotalPrice = totalPrice, NumberOfPeople = numberOfPeople };
+            db.ReservationList.Add(reservation);
+            return reservation;
         }
 
         public bool CancelCustomerReservation(Reservation reservation)
         {
-            throw new NotImplementedException();
+            return db.ReservationList.Remove(reservation);
         }
     }
 }

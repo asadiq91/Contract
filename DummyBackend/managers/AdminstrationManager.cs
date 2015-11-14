@@ -9,7 +9,6 @@ using DummyBackend.assembler;
 
 namespace DummyBackend.managers
 {
-    //NIX PILLE!!!!!!!!!!!!!!!!!!!!!!!!!!!
     public class AdminstrationManager : AdminstrationContract
     {
         Assembler db;
@@ -21,177 +20,198 @@ namespace DummyBackend.managers
 
         public Customer CreateCustomer(Customer customer)
         {
-            throw new NotImplementedException();
+            db.CustomerList.Add(customer);
+            return customer;
         }
 
         public Customer GetCustomer(string mail)
         {
-            throw new NotImplementedException();
+            return db.CustomerList.Single(x => x.Mail == mail);
         }
 
         public Customer UpdateCustomer(Customer customer)
         {
-            throw new NotImplementedException();
+            var old = db.CustomerList.Single(x => x.CustomerId == customer.CustomerId);
+            db.CustomerList[db.CustomerList.IndexOf(old)] = customer;
+            return customer;
         }
 
         public bool DeleteCustomer(Customer customer)
         {
-            throw new NotImplementedException();
+            return db.CustomerList.Remove(customer);
         }
 
         public Ferry CreateFerry(Ferry ferry)
         {
-            throw new NotImplementedException();
+            db.FerryList.Add(ferry);
+            return ferry;
         }
 
         public Ferry GetFerry(int ferryId)
         {
-            throw new NotImplementedException();
+            return db.FerryList.Single(x => x.FerryId == ferryId);
         }
 
         public Ferry UpdateFerry(Ferry ferry)
         {
-            throw new NotImplementedException();
+            var old = db.FerryList.Single(x => x.FerryId == ferry.FerryId);
+            db.FerryList[db.FerryList.IndexOf(old)] = ferry;
+            return ferry;
         }
 
         public bool DeleteFerry(Ferry ferry)
         {
-            throw new NotImplementedException();
+            return db.FerryList.Remove(ferry);
         }
 
         public Trip CreateTrip(Trip trip)
         {
-            throw new NotImplementedException();
+            db.TripList.Add(trip);
+            return trip;
         }
 
         public Trip GetTrip(int tripId)
         {
-            throw new NotImplementedException();
+            return db.TripList.Single(x => x.TripId == tripId);
         }
 
         public Trip UpdateTrip(Trip trip)
         {
-            throw new NotImplementedException();
+            var old = db.TripList.Single(x => x.TripId == trip.TripId);
+            db.TripList[db.TripList.IndexOf(old)] = trip;
+            return trip;
         }
 
         public bool DeleteTrip(Trip trip)
         {
-            throw new NotImplementedException();
+            return db.TripList.Remove(trip);
         }
 
         public Route CreateRoute(Route route)
         {
-            throw new NotImplementedException();
+            db.RouteList.Add(route);
+            return route;
         }
 
         public Route GetRoute(int routeId)
         {
-            throw new NotImplementedException();
+            return db.RouteList.Single(x => x.RouteId == routeId);
         }
 
         public Route UpdateRoute(Route route)
         {
-            throw new NotImplementedException();
+            var old = db.RouteList.Single(x => x.RouteId == route.RouteId);
+            db.RouteList[db.RouteList.IndexOf(old)] = route;
+            return route;
         }
 
         public bool DeleteRoute(Route route)
         {
-            throw new NotImplementedException();
+            return db.RouteList.Remove(route);
         }
 
         public Reservation CreateReservation(Reservation reservation)
         {
-            throw new NotImplementedException();
+            db.ReservationList.Add(reservation);
+            return reservation;
         }
 
         public Reservation GetReservation(int reservationId)
         {
-            throw new NotImplementedException();
+            return db.ReservationList.Single(x => x.ReservationId == reservationId);
         }
 
         public Reservation UpdateReservation(Reservation reservation)
         {
-            throw new NotImplementedException();
+            var old = db.ReservationList.Single(x => x.ReservationId == reservation.ReservationId);
+            db.ReservationList[db.ReservationList.IndexOf(old)] = reservation;
+            return reservation;
         }
 
         public bool DeleteReservation(Reservation reservation)
         {
-            throw new NotImplementedException();
+            return db.ReservationList.Remove(reservation);
         }
 
-        public Vehicle CreateVehicle(Vehicle Vehicle)
+        public Vehicle CreateVehicle(Vehicle vehicle)
         {
-            throw new NotImplementedException();
+            db.VehicleList.Add(vehicle);
+            return vehicle;
         }
 
         public Vehicle GetVehicle(int vehicleId)
         {
-            throw new NotImplementedException();
+            return db.VehicleList.Single(x => x.VehicleId == vehicleId);
         }
 
-        public Vehicle UpdateVehicle(Vehicle Vehicle)
+        public Vehicle UpdateVehicle(Vehicle vehicle)
         {
-            throw new NotImplementedException();
+            var old = db.VehicleList.Single(x => x.VehicleId == vehicle.VehicleId);
+            db.VehicleList[db.VehicleList.IndexOf(old)] = vehicle;
+            return vehicle;
         }
 
-        public bool DeleteVehicle(Vehicle Vehicle)
+        public bool DeleteVehicle(Vehicle vehicle)
         {
-            throw new NotImplementedException();
+            return db.VehicleList.Remove(vehicle);
         }
 
-        public Dock CreateDock(Dock Dock)
+        public Dock CreateDock(Dock dock)
         {
-            throw new NotImplementedException();
+            db.DockList.Add(dock);
+            return dock;
         }
 
         public Dock GetDock(int dockId)
         {
-            throw new NotImplementedException();
+            return db.DockList.Single(x => x.DockId == dockId);
         }
 
-        public Dock UpdateDock(Dock Dock)
+        public Dock UpdateDock(Dock dock)
         {
-            throw new NotImplementedException();
+            var old = db.DockList.Single(x => x.DockId == dock.DockId);
+            db.DockList[db.DockList.IndexOf(old)] = dock;
+            return dock;
         }
 
-        public bool DeleteDock(Dock Dock)
+        public bool DeleteDock(Dock dock)
         {
-            throw new NotImplementedException();
+            return db.DockList.Remove(dock);
         }
 
         public List<Customer> GetAllCustomer()
         {
-            throw new NotImplementedException();
+            return db.CustomerList;
         }
 
         public List<Ferry> GetAllFerries()
         {
-            throw new NotImplementedException();
+            return db.FerryList;
         }
 
         public List<Route> GetAllRoutes()
         {
-            throw new NotImplementedException();
+            return db.RouteList;
         }
 
         public List<Reservation> GetAllReservations()
         {
-            throw new NotImplementedException();
+            return db.ReservationList;
         }
 
         public List<Trip> GetAllTrips()
         {
-            throw new NotImplementedException();
+            return db.TripList;
         }
 
         public List<Vehicle> GetAllVehicles()
         {
-            throw new NotImplementedException();
+            return db.VehicleList;
         }
 
         public List<Dock> GetAllDocks()
         {
-            throw new NotImplementedException();
+            return db.DockList;
         }
     }
 }

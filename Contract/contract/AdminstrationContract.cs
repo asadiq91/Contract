@@ -201,7 +201,7 @@ namespace Contract.contract
         /// <returns>The saved Vehicle object</returns>
         /// <exception cref="eto.IllegalParameterException">Thrown if some parameters in the Vehicle object arn't in correct format</exception>
         /// <exception cref="eto.MissingParameterException">Thrown if some parameters in the Vehicle object are missing</exception>
-        Vehicle CreateVehicle(Vehicle Vehicle);
+        Vehicle CreateVehicle(Vehicle vehicle);
         /// <summary>
         /// Get a vehicle
         /// </summary>
@@ -219,7 +219,7 @@ namespace Contract.contract
         /// <exception cref="eto.VehicleNotFoundException">Thrown if the vehicle was not found</exception>
         /// <exception cref="eto.IllegalParameterException">Thrown if some parameters in the Vehicle object arn't in correct format</exception>
         /// <exception cref="eto.MissingParameterException">Thrown if some parameters in the Vehicle object are missing</exception>
-        Vehicle UpdateVehicle(Vehicle Vehicle);
+        Vehicle UpdateVehicle(Vehicle vehicle);
         /// <summary>
         /// Delete a vehicle
         /// </summary>
@@ -228,7 +228,7 @@ namespace Contract.contract
         /// <exception cref="eto.VehicleNotFoundException">Thrown if the vehicle was not found</exception>
         /// <exception cref="eto.IllegalParameterException">Thrown if some parameters in the Vehicle object arn't in correct format</exception>
         /// <exception cref="eto.MissingParameterException">Thrown if some parameters in the Vehicle object are missing</exception>
-        bool DeleteVehicle(Vehicle Vehicle);
+        bool DeleteVehicle(Vehicle vehicle);
         //Dock
         /// <summary>
         /// Create dock
@@ -237,7 +237,7 @@ namespace Contract.contract
         /// <returns>The saved Dock object</returns>
         /// <exception cref="eto.IllegalParameterException">Thrown if some parameters in the Dock object arn't in correct format</exception>
         /// <exception cref="eto.MissingParameterException">Thrown if some parameters in the Dock object are missing</exception>
-        Dock CreateDock(Dock Dock);
+        Dock CreateDock(Dock dock);
         /// <summary>
         /// Get a dock
         /// </summary>
@@ -255,7 +255,7 @@ namespace Contract.contract
         /// <exception cref="eto.DockNotFoundException">Thrown if the dock was not found</exception>
         /// <exception cref="eto.IllegalParameterException">Thrown if some parameters in the Dock object arn't in correct format</exception>
         /// <exception cref="eto.MissingParameterException">Thrown if some parameters in the Dock object are missing</exception>
-        Dock UpdateDock(Dock Dock);
+        Dock UpdateDock(Dock dock);
         /// <summary>
         /// Delete a dock
         /// </summary>
@@ -264,7 +264,7 @@ namespace Contract.contract
         /// <exception cref="eto.DockNotFoundException">Thrown if the dock was not found</exception>
         /// <exception cref="eto.IllegalParameterException">Thrown if some parameters in the Dock object arn't in correct format</exception>
         /// <exception cref="eto.MissingParameterException">Thrown if some parameters in the Dock object are missing</exception>
-        bool DeleteDock(Dock Dock);
+        bool DeleteDock(Dock dock);
         /// <summary>
         /// Get a list of all customers
         /// </summary>
