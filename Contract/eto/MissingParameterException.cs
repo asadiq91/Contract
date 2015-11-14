@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Contract.eto
 {
+    /// <summary>
+    /// thrown when parameters are missing to complete the request
+    /// </summary>
     public class MissingParameterException : Exception
     {
     }

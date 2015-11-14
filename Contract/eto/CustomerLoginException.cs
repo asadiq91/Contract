@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Contract.eto
 {
-    class CustomerLoginException : Exception
+    /// <summary>
+    /// thrown when customer faild to login
+    /// </summary>
+    public class CustomerLoginException : Exception
     {
     }
 }

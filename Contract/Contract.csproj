@@ -52,6 +52,7 @@
     <Compile Include="dto\Vehicle.cs" />
     <Compile Include="eto\CustomerLoginException.cs" />
     <Compile Include="eto\CustomerNotFoundException.cs" />
+    <Compile Include="eto\DockNotFoundException.cs" />
     <Compile Include="eto\FerryNotFoundException.cs" />
     <Compile Include="eto\IllegalParameterException.cs" />
     <Compile Include="eto\MissingParameterException.cs" />
