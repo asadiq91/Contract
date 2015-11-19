@@ -13,13 +13,11 @@ namespace AdminstrationFrontend
         AdminstrationManager manager;
         protected void Page_Load(object sender, EventArgs e)
         {
-            manager = new Assembler();
+            manager = new AdminstrationManager();
             var mail = Request.QueryString["mail"];
             if (!string.IsNullOrEmpty(mail))
             {
                 Headline.InnerText = "Edit Customer";
-                var customer = manager.get
-                FirstnameTextBox.TemplateControl
             }
 
         }
