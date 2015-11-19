@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest.Vertical", "UnitTe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyBackend", "DummyBackend\DummyBackend.csproj", "{9C4F7F3A-027C-4000-AB5F-FD5A91FF6655}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminstrationFrontend", "AdminstrationFrontend\AdminstrationFrontend.csproj", "{27385136-44E6-40A4-B16A-A1D341B557B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9C4F7F3A-027C-4000-AB5F-FD5A91FF6655}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C4F7F3A-027C-4000-AB5F-FD5A91FF6655}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C4F7F3A-027C-4000-AB5F-FD5A91FF6655}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27385136-44E6-40A4-B16A-A1D341B557B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27385136-44E6-40A4-B16A-A1D341B557B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27385136-44E6-40A4-B16A-A1D341B557B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27385136-44E6-40A4-B16A-A1D341B557B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
