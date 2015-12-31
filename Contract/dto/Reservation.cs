@@ -19,26 +19,26 @@ namespace Contract.dto
         /// </value>
         public int ReservationId { get; set; }
         /// <summary>
-        /// Property for customer id
+        /// Property for customer 
         /// </summary>
         /// <value>
         /// Contains customers unique id, who made the reservation
         /// </value>
-        public int CustomerId { get; set; }
+        public Customer Customer { get; set; }
         /// <summary>
-        /// Property for trip id
+        /// Property for trip
         /// </summary>
         /// <value>
         /// Contains trips unique id, which the reservation is made for
         /// </value>
-        public int TripId { get; set; }
+        public Trip Trip { get; set; }
         /// <summary>
-        /// Property for vehicle id
+        /// Property for vehicle 
         /// </summary>
         /// <value>
         /// Contains the vehicle type id, of the customers vehicle, if customer has any
         /// </value>
-        public int? VehicleId { get; set; }
+        public Vehicle Vehicle { get; set; }
         /// <summary>
         /// Property for total price
         /// </summary>

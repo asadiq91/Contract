@@ -54,11 +54,11 @@ namespace Contract.dto
         /// </value>
         public string Municipality { get; set; }
         /// <summary>
-        /// Property for dock id
+        /// Property for dock
         /// </summary>
         /// <value>
         /// Contains id of the dock the ferry is anchored at, if it is anchored
         /// </value>
-        public int? DockId { get; set; }
+        public Dock Dock { get; set; }
     }
 }

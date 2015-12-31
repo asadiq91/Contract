@@ -47,11 +47,18 @@ namespace Contract.dto
         /// </value>
         public string Mail { get; set; }
         /// <summary>
+        /// Property for customers password
+        /// </summary>
+        /// <value>
+        /// Contains customers password
+        /// </value>
+        public string Password { get; set; }
+        /// <summary>
         /// Property for street
         /// </summary>
         /// <value>
         /// Contains street name of customers address
-        /// </value>
+        /// </value> 
         public string Street { get; set; }
         /// <summary>
         /// Property for house number

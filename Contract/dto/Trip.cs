@@ -26,19 +26,19 @@ namespace Contract.dto
         /// </value>
         public DateTime DepatureTime { get; set; }
         /// <summary>
-        /// Property for route id
+        /// Property for route 
         /// </summary>
         /// <value>
         /// Contains id of the route of the trip
         /// </value>
-        public int RouteId { get; set; }
+        public Route Route { get; set; }
         /// <summary>
-        /// Property for ferry id
+        /// Property for ferry 
         /// </summary>
         /// <value>
         /// Contains the id of the ferry, sailing the route for the trip
         /// </value>
-        public int FerryId { get; set; }
+        public Ferry Ferry { get; set; }
         /// <summary>
         /// Property for the trip price
         /// </summary>
